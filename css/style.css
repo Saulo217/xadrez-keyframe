@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: content-box;
+}
+.tabuleiro {
+    width: 600px;
+    height: 600px;
+    background-color: #9e9d9d;
+    border-spacing: 2px;
+}
+
+td {
+    width: 72.86px;
+    height: 72.86px;
+}
+
+.whiteCell {
+    background-color: #fff;
+}
+
+.blackCell {
+    background-color: #000;
+}
+
+@keyframes move-l {
+    
+    0% { top: 0px; left: 74.86px; }
+    6.25% { top: 74.86px; left: 74.86px; }
+    12.50% { top: 149.72px; left: 74.86px; }
+    18.75% { top: 149.72px; left: 149.72px; }
+    
+    25% { top: 149.72px; left: 224.58px; }
+    31.25% { top: 149.72px; left: 299.54px; }
+    37.5% { top: 224.58px; left: 299.54px; }
+    43.75% { top: 224.58px; left: 374.3px; }
+    
+    50% { top: 299.54px; left: 374.3px; }
+    56.25% { top: 374.3px; left: 374.3px; }
+    62.5% { top: 374.3px; left: 299.54px; }
+    68.75% { top: 374.3px; left: 224.58px; }
+    
+    75% { top: 449.16px; left: 224.58px; }
+    81.25% { top: 449.16px; left: 149.72px; }
+    87.5% { top: 449.16px; left: 74.86px; }
+    93.75% { top: 524.02px; left: 74.86px; }
+    
+    100% {  }
+
+}
+img#cavalo {
+    width: 72.86px;
+    height: 72.86px;
+}
+.cavalo {
+    width: 72.86px;
+    height: 72.86px;
+    top: 0px; /* (0 x td height) + table border-spacing */
+    left: 74.86px; /* (2 x td width) + table border-spacing */
+    position: relative;
+    background-color: aqua;
+    animation: move-l 8s infinite;
+}
